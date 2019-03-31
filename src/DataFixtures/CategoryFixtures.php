@@ -17,7 +17,7 @@ class CategoryFixtures extends Fixture
         $faker = \Faker\Factory::create();
         foreach (self::CATEGORIES as $slug => $title) {
             $category = new Category($title, $slug);
-            $category->setDescription($faker->sentence(15));
+            $category->setDescription($faker->sentence(200));
             $manager->persist($category);
         }
         $manager->flush();
