@@ -1,8 +1,11 @@
 <?php
+
 namespace App\Controller;
+
 use App\Post\Service\HomePageServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+
 class DefaultController extends AbstractController
 {
     /**
@@ -13,6 +16,7 @@ class DefaultController extends AbstractController
     public function index(HomePageServiceInterface $homePageService): Response
     {
         $posts = $homePageService->getPosts();
+
         return $this->render('default/index.html.twig', [
             'posts' => $posts,
         ]);

@@ -38,7 +38,6 @@ final class PostModel
         return $this->title;
     }
 
-
     public function getShortDescription()
     {
         return $this->shortDescription;

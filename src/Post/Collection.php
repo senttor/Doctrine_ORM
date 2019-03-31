@@ -23,7 +23,7 @@ final class Collection implements \IteratorAggregate
 
     public function getFromTop(int $quantity = 1): iterable
     {
-        for ($i = 0; $i < $quantity; $i++) {
+        for ($i = 0; $i < $quantity; ++$i) {
             yield \array_shift($this->posts);
         }
     }

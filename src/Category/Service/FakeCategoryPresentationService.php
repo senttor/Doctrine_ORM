@@ -21,12 +21,10 @@ final class FakeCategoryPresentationService implements CategoryPresentationServi
     public function __construct()
     {
         $this->faker = Factory::create();
-
     }
 
     public function findBySlug(string $slug): CategoryModel
     {
-
         if (!\in_array($slug, self::CATEGORIES)) {
             throw new EntityNotFoundException(\sprintf('Categoy with slug "%s" not found', $slug));
         }

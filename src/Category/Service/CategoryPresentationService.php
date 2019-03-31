@@ -19,7 +19,6 @@ final class CategoryPresentationService implements CategoryPresentationServiceIn
 
     public function findBySlug(string $slug): CategoryModel
     {
-
         $category = $this->categoryRepository->findBySlug($slug);
         //var_dump($category);die();
 
